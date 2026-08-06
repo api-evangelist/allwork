@@ -1,0 +1,95 @@
+generated: '2026-08-06'
+method: searched
+source: https://allworknow.com/.well-known/security.txt
+summary: >-
+  AllWork publishes no developer portal and no API documentation, but two real
+  machine-readable discovery documents are served anonymously: an RFC 9116
+  security.txt on every www/app host, and a full OpenID Connect discovery
+  document for the Keycloak realm (AWN1) that fronts the AllWork web
+  application. Every agent-card, api-catalog, ai-plugin and OpenAPI path
+  probed returned 404.
+hosts:
+  - host: https://allworknow.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: allwork-security.txt
+        note: RFC 9116; Contact is a managed-security-provider mailbox (xogito.com)
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+      - path: /openapi.json
+        status: 404
+  - host: https://www.allworknow.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: allwork-security.txt
+  - host: https://app.allworknow.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: allwork-security.txt
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /openapi.json
+        status: 404
+      - path: /graphql
+        status: 404
+  - host: https://auth.allworknow.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: allwork-security.txt
+      - path: /.well-known/openid-configuration
+        status: 404
+        note: Keycloak serves discovery per realm, not at the server root
+      - path: /realms/AWN1/.well-known/openid-configuration
+        status: 200
+        file: allwork-openid-configuration.json
+        note: OpenID Connect Discovery 1.0 / RFC 8414 for realm AWN1
+      - path: /realms/AWN1/.well-known/uma2-configuration
+        status: 200
+        file: allwork-uma2-configuration.json
+        note: UMA 2.0 configuration (Keycloak authorization services)
+      - path: /realms/AWN1/.well-known/agent-card.json
+        status: 404
+  - host: https://login.allworknow.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 403
+        note: static S3 origin, AccessDenied on every path
+other_observations:
+  - url: https://allworknow.com/wp-json/
+    status: 200
+    note: >-
+      The corporate marketing site runs WordPress and its REST API discovery
+      root answers anonymously. This is the CMS behind allworknow.com, not an
+      AllWork product API, and is recorded here as an observation only — no
+      apis[] entry is claimed for it.
+  - url: https://allworknow.com/robots.txt
+    status: 200
+  - url: https://allworknow.com/sitemap.xml
+    status: 200
+hosts_with_no_dns:
+  - api.allworknow.com
+  - developers.allworknow.com
+  - docs.allworknow.com
+  - status.allworknow.com
+  - trust.allworknow.com
+x-evidence:
+  fetched: '2026-08-06'
+  method: anonymous HTTPS GET, no credentials

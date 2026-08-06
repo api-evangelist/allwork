@@ -42,5 +42,8 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AllWork is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+AllWork is a New York-based flexible-workforce management and payments platform for contingent labor — onboarding, scheduling, budgeting, time and attendance, payroll, reporting, and Employer of Record (EOR) / Agent of Record (AOR) services for W-2 and 1099 talent across the US, Canada and internationally.
+
+AllWork publishes no public developer program: no API reference, no SDK, and no machine-readable specification. The only anonymously readable machine contracts on the domain are the Keycloak OpenID Connect discovery document for the realm behind app.allworknow.com and an RFC 9116 security.txt. See `x-coverage` in `apis.yml`.
+
+- https://allworknow.com/

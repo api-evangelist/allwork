@@ -1,0 +1,58 @@
+generated: '2026-08-06'
+method: searched
+source: https://auth.allworknow.com/realms/AWN1/.well-known/openid-configuration
+note: >-
+  Scopes are taken verbatim from scopes_supported in AllWork's live OpenID
+  Connect discovery document for Keycloak realm AWN1. These are the standard
+  OIDC/Keycloak client scopes — AllWork publishes no application-specific
+  (workforce, payroll, scheduling) scope vocabulary, and no scopes reference
+  page exists on allworknow.com.
+docs: null
+schemes:
+  - name: allworkOAuth2
+    source: well-known/allwork-openid-configuration.json
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://auth.allworknow.com/realms/AWN1/protocol/openid-connect/auth
+        tokenUrl: https://auth.allworknow.com/realms/AWN1/protocol/openid-connect/token
+      - flow: clientCredentials
+        tokenUrl: https://auth.allworknow.com/realms/AWN1/protocol/openid-connect/token
+      - flow: deviceCode
+        deviceAuthorizationUrl: https://auth.allworknow.com/realms/AWN1/protocol/openid-connect/auth/device
+        tokenUrl: https://auth.allworknow.com/realms/AWN1/protocol/openid-connect/token
+scopes:
+  - scope: openid
+    description: Standard OpenID Connect scope; requests an ID token.
+    flows: [authorizationCode]
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: profile
+    description: Basic profile claims (name, given_name, family_name, preferred_username).
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: email
+    description: Email address claim.
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: address
+    description: Address claim.
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: phone
+    description: Phone number claim.
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: offline_access
+    description: Requests a refresh token usable while the user is offline.
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: roles
+    description: Keycloak client scope carrying realm and client role mappings.
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: acr
+    description: Keycloak client scope carrying the authentication context class reference.
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: web-origins
+    description: Keycloak client scope carrying allowed CORS web origins.
+    sources: [well-known/allwork-openid-configuration.json]
+  - scope: microprofile-jwt
+    description: Keycloak client scope emitting MicroProfile JWT claims (upn, groups).
+    sources: [well-known/allwork-openid-configuration.json]
+x-evidence:
+  fetched: '2026-08-06'
+  url: https://auth.allworknow.com/realms/AWN1/.well-known/openid-configuration
+  http_status: 200

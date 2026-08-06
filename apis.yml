@@ -1,17 +1,38 @@
 aid: allwork
 name: AllWork
-description: 'AllWork is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'AllWork is a New York-based flexible-workforce management and payments
+  platform for contingent labor. It combines onboarding, scheduling, budgeting and
+  planning, time and attendance with GPS-confirmed check-in, timesheet and expense
+  approval, payroll, reporting and analytics, and a manager mobile app into one
+  system, and acts as both Employer of Record (EOR) and Agent of Record (AOR) so a
+  brand can compliantly engage and pay W-2 and 1099 talent across the United States,
+  Canada and internationally. It sells into beauty and luxury, retail, food and
+  beverage, oil and gas, technology and engineering, life sciences and healthcare,
+  financial services, and self-direction programs, handling worker classification,
+  labor-law adherence, and federal, state and local tax filings. AllWork publishes
+  no public developer program: there is no API reference, no SDK, and no
+  machine-readable specification on its site.'
+image: https://allworknow.com/wp-content/uploads/2023/07/Favicon-2.png
 url: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: enriched
+x-tier-reason: enrichment-pipeline
 specificationVersion: '0.20'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Workforce Management
+- Human Resources
+- Staffing
+- Payroll
+- Employer of Record
+- Contingent Workforce
+- Gig Economy
+- Scheduling
+- Time and Attendance
+- Compliance
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,74 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VulnerabilityDisclosure
+  url: security/allwork-vulnerability-disclosure.yml
+- type: Security
+  url: https://allworknow.com/.well-known/security.txt
+- type: DomainSecurity
+  url: security/allwork-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://allworknow.com/
+- type: Documentation
+  url: https://allworknow.com/how-it-works/
+- type: Support
+  url: https://allworknow.com/contact-us/
+- type: Blog
+  url: https://allworknow.com/blog/
+- type: BlogRSS
+  url: https://allworknow.com/feed/
+- type: Login
+  url: https://app.allworknow.com/
+- type: TermsOfService
+  url: https://allworknow.com/terms-of-use-2/
+- type: PrivacyPolicy
+  url: https://allworknow.com/privacy-policy-3/
+- type: Press
+  url: https://allworknow.com/press/
+- type: FAQ
+  url: https://allworknow.com/frequently-asked-questions/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/allwork
+- type: Twitter
+  url: https://twitter.com/AllWorkNow
+- type: WellKnown
+  url: well-known/allwork-well-known.yml
+- type: SecurityTxt
+  url: well-known/allwork-security.txt
+- type: OpenIDConnect
+  url: well-known/allwork-openid-configuration.json
+- type: Authentication
+  url: authentication/allwork-authentication.yml
+- type: OAuthScopes
+  url: scopes/allwork-scopes.yml
+- type: Conformance
+  url: conformance/allwork-conformance.yml
+- type: LLMsTxt
+  url: llms/allwork-llms.txt
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 10
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AllWork ships only an end-user SaaS application — api.allworknow.com,
+    developers.allworknow.com and docs.allworknow.com do not resolve in DNS, and
+    the only anonymously readable machine contracts on the domain are the
+    Keycloak OIDC discovery document for the realm that logs users into
+    app.allworknow.com and an RFC 9116 security.txt.
+  evidence:
+    - url: https://allworknow.com/openapi.json
+      status: 404
+    - url: https://app.allworknow.com/openapi.json
+      status: 404
+    - url: https://allworknow.com/.well-known/api-catalog
+      status: 404
+    - url: https://auth.allworknow.com/realms/AWN1/.well-known/openid-configuration
+      status: 200
+    - url: https://allworknow.com/.well-known/security.txt
+      status: 200
+  checked: '2026-08-06'
+
