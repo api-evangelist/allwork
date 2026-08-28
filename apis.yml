@@ -12,6 +12,17 @@ description: 'AllWork is a New York-based flexible-workforce management and paym
   labor-law adherence, and federal, state and local tax filings. AllWork publishes
   no public developer program: there is no API reference, no SDK, and no
   machine-readable specification on its site.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://allworknow.com/wp-content/uploads/2023/07/Favicon-2.png
 url: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/apis.yml
 x-type: company
