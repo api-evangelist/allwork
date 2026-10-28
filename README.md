@@ -64,8 +64,93 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AllWork is a New York-based flexible-workforce management and payments platform for contingent labor — onboarding, scheduling, budgeting, time and attendance, payroll, reporting, and Employer of Record (EOR) / Agent of Record (AOR) services for W-2 and 1099 talent across the US, Canada and internationally.
+AllWork is a New York-based flexible-workforce management and payments platform for contingent labor. It combines onboarding, scheduling, budgeting and planning, time and attendance with GPS-confirmed check-in, timesheet and expense approval, payroll, reporting and analytics, and a manager mobile app into one system, and acts as both Employer of Record (EOR) and Agent of Record (AOR) so a brand can compliantly engage and pay W-2 and 1099 talent across the United States, Canada and internationally. It sells into beauty and luxury, retail, food and beverage, oil and gas, technology and engineering, life sciences and healthcare, financial services, and self-direction programs, handling worker classification, labor-law adherence, and federal, state and local tax filings. AllWork publishes no public developer program: there is no API reference, no SDK, and no machine-readable specification on its site.
 
-AllWork publishes no public developer program: no API reference, no SDK, and no machine-readable specification. The only anonymously readable machine contracts on the domain are the Keycloak OpenID Connect discovery document for the realm behind app.allworknow.com and an RFC 9116 security.txt. See `x-coverage` in `apis.yml`.
+**Areas:** Company · Workforce Management · Human Resources · Staffing · Payroll · Employer of Record · Contingent Workforce · Gig Economy · Scheduling · Time and Attendance · Compliance
 
-- https://allworknow.com/
+## AllWork on APIs.io
+
+Everything profiled for AllWork is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/allwork/](https://apis.io/providers/allwork/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Allwork Authentication](https://apis.io/security/allwork/allwork-authentication/)
+- [Allwork Domain Security](https://apis.io/security/allwork/allwork-domain-security/)
+- [Allwork Vulnerability Disclosure](https://apis.io/security/allwork/allwork-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Allwork Scopes](https://apis.io/scopes/allwork/allwork-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://allworknow.com/)
+- [Documentation](https://allworknow.com/how-it-works/)
+- [Support](https://allworknow.com/contact-us/)
+- [Blog](https://allworknow.com/blog/)
+- [Security](https://allworknow.com/.well-known/security.txt)
+- [Terms of service](https://allworknow.com/terms-of-use-2/)
+- [Privacy policy](https://allworknow.com/privacy-policy-3/)
+
+## API Evangelist rating
+
+**Kin Score 20.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 49.1 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 27.6 |
+
+**Agent readiness 15.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 40.2** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/allwork/](https://apis.io/providers/allwork/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AllWork: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/allwork/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
